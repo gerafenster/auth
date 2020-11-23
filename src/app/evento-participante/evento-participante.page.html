@@ -1,0 +1,43 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="#000">
+    <ion-title class="ion-text-center">
+      Evento: {{titulo}}
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click) = "fechar()">
+        <ion-icon size = "large" name="arrow-undo-circle" color="danger"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content  class="ion-padding" [fullscreen]="true">
+  <ion-card color="#000">
+    <ion-item>
+        <ion-label>Descrição: {{descricao}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Local: {{local}}</ion-label>
+    </ion-item>
+    <ion-item>
+        <ion-label>Data inicial do evento: {{dataIni}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Data final do evento: {{dataFim}}</ion-label>
+    </ion-item>
+    <ion-item>
+        <ion-label>Hora inicial do evento: {{horaIni}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Hora final do evento: {{horaFim}}</ion-label>
+    </ion-item>
+    <ion-item>
+        <ion-label>Capacidade de participantes: {{quantidadePar}}</ion-label>
+    </ion-item>
+  </ion-card>
+</ion-content>
+
+<ion-footer>
+  <ion-button color="#000" expand="full" (click)="addParticipantes()" >Adicionar participantes</ion-button>
+  <ion-button color="#000" expand="full" (click)="listParticipantes()" >Lista de participantes</ion-button>
+</ion-footer>

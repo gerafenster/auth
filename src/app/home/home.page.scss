@@ -1,0 +1,23 @@
+ion-header{
+  background: linear-gradient(#0510aa,#313ffd);
+  color:white;
+}
+ion-title {
+  font-weight: bold;
+  font-size: 2ch;
+}
+ion-card{
+  background: #50c8ff;
+}
+ion-content {
+  --background:#50c8ff url('../../assets/Logo/novo.jpg');
+}
+ion-button {
+  --background:#0510aa ;
+  --border-radius: 50px;
+}
+ion-item{
+  border-radius: 30px;
+}
+
+

@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar color="#999">
+    <ion-title>{{pageTitulo}}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click) = "fechar()">
+        <ion-icon size = "large" name="arrow-undo-circle" color="danger"></ion-icon>
+      </ion-button>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" [fullscreen]="true">
+  <ion-refresher slot="fixed" (ionRefresh) = "dorefresh($event)">
+    <ion-refresher-content 
+      pullingText="Pull text"
+      refreshingSpinner="circles"
+      refreshingText="refreshing">
+    </ion-refresher-content>
+  </ion-refresher>
+    <ion-list *ngFor = "let user of users">
+      <ion-card>
+        <ion-item >
+          <ion-label>{{user.nome}}</ion-label>
+        </ion-item>
+        <ion-button expand = "full" color="primary" (click) = "Participante(user.id)">
+          {{button}}
+        </ion-button>
+      </ion-card>
+    </ion-list>
+  
+</ion-content>

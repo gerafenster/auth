@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar color="#999">
+    <ion-title>Lista de Registros</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" [fullscreen]="true">
+  <ion-refresher slot="fixed" (ionRefresh) = "dorefresh($event)">
+    <ion-refresher-content 
+      pullingText="Pull text"
+      refreshingSpinner="circles"
+      refreshingText="refreshing">
+    </ion-refresher-content>
+  </ion-refresher>
+    <ion-list *ngFor = "let registro of registroslist">
+      <ion-item-sliding>
+        <ion-item>
+          <ion-card-content>
+            <ion-card-title >
+              <ion-label >Acesso {{registro.Acesso}}</ion-label>
+            </ion-card-title>
+            <ion-item>
+              <ion-label>Usuario: {{registro.part_idUser}}</ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-label>Evento: {{registro.part_idEvento}}</ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-label>Chave: {{registro.part_chave}} </ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-label>Data: {{registro.dataRegistro}} </ion-label>
+            </ion-item>
+
+          </ion-card-content>
+        </ion-item>
+      </ion-item-sliding>
+    </ion-list>
+  
+</ion-content>
+

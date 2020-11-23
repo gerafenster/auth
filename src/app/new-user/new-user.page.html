@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar color="#999">
+    <ion-buttons slot="end">
+    <ion-button (click) = "fechar()">
+      <ion-icon size = "large" class="far fa-arrow-alt-circle-left"></ion-icon>
+    </ion-button>
+    </ion-buttons>
+    <ion-title>{{titulo}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-list>
+    <ion-item>
+      <ion-label position="floating">Nome:</ion-label>
+      <ion-input clearInput [(ngModel)]="nome"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Email    </ion-label>
+      <ion-input type = "email" clearInput [(ngModel)] ="email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Genero   </ion-label>
+      <ion-select [(ngModel)] ="genero">
+        <ion-select-option value = "Fem">Feminino</ion-select-option>
+        <ion-select-option value = "Masc">Masculino</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Data de nascimento    </ion-label>
+      <ion-input type = "date" clearInput [(ngModel)] ="datanasc"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Login    </ion-label>
+      <ion-input clearInput [(ngModel)] ="login"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Senha    </ion-label>
+      <ion-input type="password" clearInput [(ngModel)] ="senha"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Confirme a senha:     </ion-label>
+      <ion-input type="password" clearInput [(ngModel)] ="Csenha"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-checkbox [(ngModel)] ="admin" color="dark"></ion-checkbox>
+      <ion-label >Administrador     </ion-label>
+    </ion-item>
+    
+    <ion-button 
+      fill="outline" 
+      expand="block" 
+      class="ion-margin-top"
+      (click)="validaCampos()"
+      >Salvar</ion-button>
+    </ion-list>
+</ion-content>

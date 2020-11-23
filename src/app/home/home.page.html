@@ -1,0 +1,27 @@
+<ion-header  [translucent]="true">
+  <ion-toolbar color="#999">
+    <ion-title class="ion-text-center">
+      AuthToken
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+    <ion-item-group>
+      <ion-img src="../assets/Logo/login.png"></ion-img>
+    </ion-item-group>
+    <ion-card-content>
+      <ion-item >
+        <ion-label position="floating">Login:</ion-label>
+        <ion-input clearInput [(ngModel)]="login"></ion-input>
+      </ion-item>
+      <ion-item >
+        <ion-label position="floating">Senha:   </ion-label>
+        <ion-input type = "password" clearInput [(ngModel)] ="senha"></ion-input>
+      </ion-item>
+      <ion-button expand="block" (click)="fazLogin()" > Login</ion-button>
+      <ion-button expand="block" (click)="irUsuarios()" > Saiba mais...</ion-button>
+    </ion-card-content>
+</ion-content >
+

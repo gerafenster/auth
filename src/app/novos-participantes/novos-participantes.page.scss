@@ -1,0 +1,25 @@
+ion-toolbar{
+    background: radial-gradient(#0510aa,#3a2488,#7c05a3);
+    color:white;
+  }
+  ion-content{
+    --background: radial-gradient(#0510aa,#3a2488,#7c05a3);
+  }
+  ion-title {
+    font-weight: bold;
+    font-size: 2ch;
+    padding-left: 2ch;
+  }
+  ion-list{
+    background-color: #7c05a3;
+  }
+  ion-item{
+    border-radius: 1ch;
+  }
+  ion-label{
+    padding-left: 2ch;
+  }
+  
+  
+  
+  

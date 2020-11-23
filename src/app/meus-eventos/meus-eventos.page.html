@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar color="#999">
+    <ion-title>Meus Eventos</ion-title>
+    <ion-buttons slot= "end" (click)="voltar()">Back    
+      <ion-icon size="large" class="far fa-arrow-alt-circle-left"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" [fullscreen]="true">
+  <ion-refresher slot="fixed" (ionRefresh) = "dorefresh($event)">
+    <ion-refresher-content 
+      pullingText="Pull text"
+      refreshingSpinner="circles"
+      refreshingText="refreshing">
+    </ion-refresher-content>
+  </ion-refresher>
+    <ion-list *ngFor = "let eventos of eventoslist">
+        <ion-item (click)="geraQR(eventos.idEvento)">
+          <ion-card-title >
+            <ion-label>Titulo: {{eventos.titulo}}</ion-label>
+          </ion-card-title>
+          <ion-card >
+            <ion-label><br><br>Descrição: {{eventos.descricao}}</ion-label>
+          </ion-card>
+        </ion-item>
+    </ion-list>
+</ion-content>

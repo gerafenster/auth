@@ -1,0 +1,4 @@
+> ng.cmd run app:serve --host=192.168.2.114,192.168.2.114 --port=8200
+[ng] An unhandled exception occurred: getaddrinfo ENOTFOUND 192.168.2.114,192.168.2.114
+[ng] See "C:\Users\bress\AppData\Local\Temp\ng-XbSPvC\angular-errors.log" for further details.
+
